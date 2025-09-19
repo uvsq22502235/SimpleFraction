@@ -1,5 +1,8 @@
 package com.example.TD1;
 
 public class Fraction {
-    //vide pour le moment
+    @Override
+    public String toString() {
+        return "Je suis une fraction.";
+    }
 }
