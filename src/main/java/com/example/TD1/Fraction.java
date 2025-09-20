@@ -48,4 +48,30 @@ public class Fraction {
         int Newden = this.denominateur * f.denominateur;
         return new Fraction(Newnum, Newden);
     }
+
+    private void reduire() {
+        int a = numerateur;
+        int b = denominateur;
+        while (b != 0) {
+            int t = b;
+            b = a % b;
+            a = t;
+        }
+        int gcd = a; 
+        numerateur /= gcd;
+        denominateur /= gcd;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Fraction f1 = this;
+        Fraction f2 = (Fraction) obj;
+        f1.reduire();
+        f2.reduire();
+        return f1.numerateur == f2.numerateur &&
+                f1.denominateur == f2.denominateur;
+    }
+
 }
