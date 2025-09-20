@@ -42,4 +42,10 @@ public class Fraction {
     public double doubleValue() {
         return (double) numerateur / denominateur;
     }
+
+    public Fraction add(Fraction f) {
+        int Newnum = this.numerateur * f.denominateur + this.denominateur * f.numerateur;
+        int Newden = this.denominateur * f.denominateur;
+        return new Fraction(Newnum, Newden);
+    }
 }
