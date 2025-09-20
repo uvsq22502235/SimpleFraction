@@ -23,4 +23,7 @@ public class Fraction {
         this.numerateur = 0;
         this.denominateur = 1;
     }
+
+    public static final Fraction ZERO = new Fraction(0, 1);
+    public static final Fraction UN = new Fraction(1, 1);
 }
