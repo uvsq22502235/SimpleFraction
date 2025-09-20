@@ -5,4 +5,7 @@ public class Fraction {
     public String toString() {
         return "Je suis une fraction.";
     }
+
+    private int numerateur;
+    private int denominateur;
 }
