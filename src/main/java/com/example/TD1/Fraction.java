@@ -1,6 +1,6 @@
 package com.example.TD1;
 
-public class Fraction  implements Comparable<Fraction>{
+public class Fraction extends Number implements Comparable<Fraction>{
     @Override
     public String toString() {
         return numerateur + "/" + denominateur;
@@ -39,6 +39,22 @@ public class Fraction  implements Comparable<Fraction>{
         return denominateur;
     }
 
+    @Override
+    public int intValue() {
+        return numerateur / denominateur;
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) numerateur / denominateur;
+    }
+
+    @Override
+    public long longValue() {
+        return (long) numerateur / denominateur;
+    }
+
+    @Override
     public double doubleValue() {
         return (double) numerateur / denominateur;
     }
