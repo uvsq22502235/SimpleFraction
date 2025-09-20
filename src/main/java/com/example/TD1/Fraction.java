@@ -6,9 +6,11 @@ public class Fraction {
         return numerateur + "/" + denominateur;
     }
 
+    // Définition des attributs
     private int numerateur;
     private int denominateur;
 
+    // Définition des constructeurs
     public Fraction(int numerateur, int denominateur) {
         this.numerateur = numerateur;
         this.denominateur = denominateur;
@@ -24,6 +26,7 @@ public class Fraction {
         this.denominateur = 1;
     }
 
+    // Définition des constantes
     public static final Fraction ZERO = new Fraction(0, 1);
     public static final Fraction UN = new Fraction(1, 1);
 
