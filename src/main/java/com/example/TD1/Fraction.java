@@ -1,6 +1,6 @@
 package com.example.TD1;
 
-public class Fraction {
+public class Fraction  implements Comparable<Fraction>{
     @Override
     public String toString() {
         return numerateur + "/" + denominateur;
@@ -72,6 +72,14 @@ public class Fraction {
         f2.reduire();
         return f1.numerateur == f2.numerateur &&
                 f1.denominateur == f2.denominateur;
+    }
+
+    @Override
+    public int compareTo(Fraction f) {
+        int diff=this.numerateur*f.denominateur-this.denominateur*f.numerateur;
+        if(diff<0) return -1;
+        if(diff>0) return 1;
+        return 0;
     }
 
 }
